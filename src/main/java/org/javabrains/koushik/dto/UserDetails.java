@@ -17,24 +17,9 @@ public class UserDetails {
 
     private String userName;
 
-    @Temporal(TemporalType.DATE)
-    private Date joinedDate;
+    @Embedded
+    private Address address;
 
-    @Basic
-    private String address;
-
-    @Lob
-    private String description;
-
-
-
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
 
 
     public String getUserName() {
@@ -45,40 +30,11 @@ public class UserDetails {
         this.userName = userName;
     }
 
-
-    public Date getJoinedDate() {
-        return joinedDate;
-    }
-
-    public void setJoinedDate(Date joinedDate) {
-        this.joinedDate = joinedDate;
-    }
-
-    public String getAddress() {
+    public Address getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
+    public void setAddress(Address address) {
         this.address = address;
-    }
-
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    @Override
-    public String toString() {
-        return "UserDetails{" +
-                "userId=" + userId +
-                ", userName='" + userName + '\'' +
-                ", joinedDate=" + joinedDate +
-                ", address='" + address + '\'' +
-                ", description='" + description + '\'' +
-                '}';
     }
 }
