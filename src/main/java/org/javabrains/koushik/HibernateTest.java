@@ -14,7 +14,7 @@ public class HibernateTest {
 
     public static void main(String[] args) {
         UserDetails user = new UserDetails();
-        user.setUserId(1);
+        //user.setUserId(1);
         user.setUserName("First User");
         user.setAddress("First user's address");
         user.setJoinedDate(new Date());

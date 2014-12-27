@@ -12,7 +12,7 @@ import java.util.Date;
 @Table(name = "USER_DETAILS")
 public class UserDetails {
 
-    @Id
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;
 
     private String userName;
